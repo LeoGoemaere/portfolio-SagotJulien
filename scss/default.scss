@@ -1,0 +1,16 @@
+// Base styles
+@import 'base/_reset';
+@import 'base/_typography';
+@import 'base/_colors';
+@import 'base/_breakpoints';
+
+// Components styles
+@import 'components/_buttons';
+
+// Layouts styles
+@import 'layouts/_grid';
+@import 'layouts/_header';
+@import 'layouts/_footer';
+
+// Page styles
+@import 'page/_portfolio';
