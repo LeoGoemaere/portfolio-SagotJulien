@@ -7,15 +7,29 @@ const gulp = require('gulp'),
 	  pngquant = require('imagemin-pngquant'),
 	  babel = require('gulp-babel'),
 	  uglify = require('gulp-uglify'),
-	  concat = require('gulp-concat');
+	  concat = require('gulp-concat'),
+	  sourcemaps = require('gulp-sourcemaps');
 
 
-gulp.task('sass', () => {
+
+gulp.task('sass-maps', () => {
+	return gulp.src('./scss/**/*.scss')
+	.pipe(sourcemaps.init())
+	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+  	    cascade: false
+    }))
+	.pipe(sourcemaps.write('./maps'))
+	.pipe(gulp.dest('./dist/css'));
+})
+
+gulp.task('sass-build', () => {
 	return gulp.src('./scss/**/*.scss')
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(autoprefixer({
         browsers: ['last 2 versions'],
-        cascade: false
+  	    cascade: false
     }))
 	.pipe(gulp.dest('./dist/css'));
 })
@@ -30,14 +44,28 @@ gulp.task('sources', () => {
 	.pipe(gulp.dest('./dist/assets'));
 });
 
-gulp.task('js', () => {
+gulp.task('js-maps', () => {
+	return gulp.src('js/components/*.js')
+	.pipe(sourcemaps.init())
+	.pipe(babel({
+		presets: ['es2015']
+	}))
+	.pipe(concat('bundle.js'))
+	.pipe(uglify())
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('dist/js/'));
+});
+
+gulp.task('js-build', () => {
 	return gulp.src('js/components/*.js')
 	.pipe(babel({
 		presets: ['es2015']
 	}))
+	.pipe(concat('bundle.js'))
 	.pipe(uglify())
-    .pipe(gulp.dest('dist/js/components/'));
+    .pipe(gulp.dest('dist/js/'));
 });
+
 
 gulp.task('js-concat', ['js'], () => {
 	return gulp.src('./dist/js/components/*.js')
@@ -47,11 +75,12 @@ gulp.task('js-concat', ['js'], () => {
 
 
 gulp.task('build', () => {
-	gulp.start(['sass', 'sources', 'js-concat']);
+	gulp.start(['sass-build', 'sources', 'js-build']);
 })
 
-gulp.task('default', () => {
-	gulp.watch('./scss/**/*.scss', ['sass']);
+gulp.task('dev', () => {
+	gulp.watch('./scss/**/*.scss', ['sass-maps']);
+	gulp.watch('./js/components/*.js', ['js-maps']);
 });
 
 
