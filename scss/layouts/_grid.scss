@@ -1,0 +1,45 @@
+main {
+	max-width: 1280px;
+	margin: auto;
+}
+
+.three-rows {
+	width: 33.33%;
+	float: left;
+}
+.two-rows {
+	width: 50%;
+	float: left;
+}
+
+.mac {
+
+}
+
+.iphone {
+	&.v5 {
+		width: 100%;
+		height: 717px;
+		max-width: 336px;
+	}
+	&.v6 {
+		width: 100%;
+		max-width: 391px;
+		// height: 816px;
+		padding-bottom: (816%/391*100);
+		background-color: steelblue;
+	}
+}
+
+.ipad {
+
+}
+
+.android {
+
+}
+
+.clear {
+	clear: both;
+	display: block;
+}
