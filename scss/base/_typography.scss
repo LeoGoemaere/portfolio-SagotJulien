@@ -1,3 +1,49 @@
 body {
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI;
+	font-weight: 400;
 }
+
+
+// h1 & subtitle sizes
+h1 {
+	font-size: $h1-size;
+	font-weight: 500;
+	> span {
+		font-weight: 700;
+	}
+}
+.h1-subtitle {
+	font-size: $h1-subtitle-size;
+	font-weight: 300;
+}
+
+
+// h2 & subtitle sizes
+h2 {
+	font-size: $h2-size;
+	font-weight: 900;
+}
+.h2-subtitle {
+	font-size: $h2-subtitle-size;
+}
+.project-year {
+	font-size: $project-year-size;
+}
+
+// Cta size
+.cta {
+	font-size: $cta-size;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+// Footer size
+footer {
+	font-size: $footer-size;
+	font-weight: 500;
+}
+
+.developer-name {
+	font-weight: 700;
+}
+
