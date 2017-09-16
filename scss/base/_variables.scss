@@ -28,10 +28,20 @@ $iphone5-height: 717;
 $iphone5-sreen-width: 320;
 $iphone5-sreen-height: 568;
 
+$ipad-width: 1280;
+$ipad-height: 909;
+$ipad-sreen-width: 1132;
+$ipad-sreen-height: 849;
+
 $mac-width: 1280;
 $mac-height: 898;
 $mac-sreen-width: 1184;
 $mac-sreen-height: 802;
+
+$android-width: 496;
+$android-height: 928;
+$android-sreen-width: 480;
+$android-sreen-height: 800;
 
 
 // Devices ratios
@@ -45,14 +55,21 @@ $iphone5-screen-width-container: ($iphone5-sreen-width*100/$iphone5-width)+%;
 $iphone5-screen-ratio: ($iphone5-sreen-height/$iphone5-sreen-width*100)+%;
 $iphone5-screen-topSpacing-ratio: (64*100/$iphone5-height)+%;
 
+$ipad-ratio: ($ipad-height/$ipad-width*100)+%;
+$ipad-screen-width-container: ($ipad-sreen-width*100/$ipad-width)+%;
+$ipad-screen-ratio: ($ipad-sreen-height/$ipad-sreen-width*100)+%;
+$ipad-screen-topSpacing-ratio: (30*100/$ipad-height)+%;
+
 $mac-ratio: ($mac-height/$mac-width*100)+%;
 $mac-screen-width-container: ($mac-sreen-width*100/$mac-width)+%;
 $mac-screen-ratio: ($mac-sreen-height/$mac-sreen-width*100)+%;
 $mac-screen-topSpacing-ratio: (48*100/$mac-height)+%;
 
+$android-ratio: ($android-height/$android-width*100)+%;
+$android-screen-width-container: ($android-sreen-width*100/$android-width)+%;
+$android-screen-ratio: ($android-sreen-height/$android-sreen-width*100)+%;
+$android-screen-topSpacing-ratio: (64*100/$android-height)+%;
 
-// • iPhone 6 (w: 391px, h: ccc)
-// • iPhone 5 (w: 336px, h: 717px)
-// • Android Phone (w: 496px, h: 928px)
-// • iPad (w: 1280px, h: 909px)
-// • Generic (for Desktop) (w: 1280px, h: 898px)
+
+// Breakpoint
+$break-mobile: "screen and (max-width : 480px)";

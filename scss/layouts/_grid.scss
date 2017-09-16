@@ -1,39 +1,98 @@
-main {
-	max-width: 1280px;
+.two-rows,
+.three-rows {
+	float: left;
+	box-sizing: border-box;
+	@media #{$break-mobile} {
+		width: 100%;
+		float: none;
+		text-align: center;
+		padding: 0;
+	}
+}
+
+.iphone,
+.mac,
+.android,
+.ipad {
+	position: relative;
 	margin: auto;
+	> div {
+		width: 100%;
+	}
+}
+
+.iphone,
+.android {
+	display: inline-block;
+	width: 100%;
+}
+
+.screen {
+	position: absolute;
+	left: 0;
+	margin: auto;
+	right: 0;		
+}
+
+img {
+	position: absolute;
+	max-width: 100%;
+	top: 0;
+	left: 0;
 }
 
 .three-rows {
 	width: 33.33%;
-	float: left;
-	box-sizing: border-box;
-	&:first-child {
+	&:first-of-type {
 		padding-right: 10px;
+		text-align: left;
+		@media #{$break-mobile} { 
+			padding: 0; 
+			text-align: center;
+		}
 	}
-	&:nth-child(2) {
-		text-align: center;
+	&:nth-of-type(2) {
 		padding: 0 5px;
+		text-align: center;
+		@media #{$break-mobile} { 
+			padding: 0; 
+			text-align: center;
+		}
 	}
-	&:nth-child(3) {
+	&:nth-of-type(3) {
 		text-align: right;
 		padding-left: 10px; 
+		@media #{$break-mobile} { 
+			padding: 0; 
+			text-align: center;
+		}
 	}
 }
+
 .two-rows {
 	width: 50%;
-	float: left;
-}
-.one-row {
-	width: 100%;
-	clear: both;
+	&:first-of-type {
+		padding-right: 10px;
+		text-align: right;
+		@media #{$break-mobile} { 
+			padding: 0; 
+			text-align: center;
+		}
+	}
+	&:nth-of-type(2) {
+		text-align: left;
+		padding-left: 10px; 
+		@media #{$break-mobile} { 
+			padding: 0; 
+			text-align: center;
+		}
+	}
 }
 
+// Devices
 .mac {
-	position: relative;
-	margin: auto;
 	max-width: $mac-width+px;
 	> div {
-		width: 100%;
 		padding-bottom: $mac-ratio;
 		background-color: steelblue;			
 	}
@@ -46,14 +105,36 @@ main {
 	}
 }
 
-.iphone {
-	position: relative;
-	margin: auto;
-	display: inline-block;
-	width: 100%;
+.android {
 	> div {
-		width: 100%;
+		padding-bottom: $android-ratio;
+		background-color: steelblue;			
 	}
+	.screen {
+		transform: translateY($android-screen-topSpacing-ratio);
+		width: $android-screen-width-container;
+		figure {
+			padding-top: $android-screen-ratio;
+		}
+	}
+}
+
+.ipad {
+	max-width: $ipad-width+px;
+	> div {
+		padding-bottom: $ipad-ratio;
+		background-color: steelblue;			
+	}
+	.screen {
+		transform: translateY($ipad-screen-topSpacing-ratio);
+		width: $ipad-screen-width-container;
+		figure {
+			padding-top: $ipad-screen-ratio;
+		}
+	}
+}
+
+.iphone {
 	&.v6 {
 		max-width: $iphone6-width+px;
 		> div {
@@ -82,34 +163,6 @@ main {
 			}
 		}
 	}
-}
-
-
-.screen {
-	position: absolute;
-	left: 0;
-	margin: auto;
-	right: 0;		
-}
-
-img {
-	position: absolute;
-	max-width: 100%;
-	top: 0;
-	left: 0;
-}
-
-.ipad {
-
-}
-
-.android {
-
-}
-
-.clear {
-	clear: both;
-	display: block;
 }
 
 .clearfix {
