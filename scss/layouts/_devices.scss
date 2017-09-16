@@ -102,7 +102,7 @@ img {
 		&:after {
 			content: "";
 			background-color: $website-color;
-			// border-radius: 50%;
+			border-radius: percentageCornerRadiusFor($android-home-button-width, $android-home-button-height, $android-button-inset-radius);
 			position: absolute;
 			margin: auto;
 			box-shadow: inset 0 8px 40px 0 rgba(219,226,238,0.18);
@@ -119,6 +119,8 @@ img {
 			width: $android-button-width-ratio;
 			padding-top: $android-button-height-ratio;
 			border: $android-border-button-width+px solid $device-border-color;
+			background-color: $device-border-color;
+			border-radius: percentageCornerRadiusFor(90, 10, $android-button-outset-radius);
 			left: 0;
 			right: 0;
 			bottom: calc(#{$android-button-bottomSpacing-ratio} - 2px);

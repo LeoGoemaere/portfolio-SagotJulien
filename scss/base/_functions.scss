@@ -3,3 +3,7 @@
 }
 
 
+@function ratioFor($elementA, $elementB) {
+    @return ($elementA/$elementB*100)+%;
+}
+
