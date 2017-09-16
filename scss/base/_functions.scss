@@ -1,0 +1,5 @@
+@function percentageCornerRadiusFor($deviceWidth, $deviceHeight, $expectedCornerRadius) {
+    @return #{$expectedCornerRadius/$deviceWidth*100+%} / #{$expectedCornerRadius/$deviceHeight*100+%};
+}
+
+

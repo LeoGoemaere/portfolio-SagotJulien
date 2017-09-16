@@ -37,6 +37,9 @@ $iphone5-height: 717;
 $iphone5-screen-width: 320;
 $iphone5-screen-height: 568;
 
+$apple-home-button: 43;
+$apple-border-button-width: 2;
+
 $ipad-width: 1280;
 $ipad-height: 909;
 $ipad-screen-width: 1132;
@@ -52,22 +55,37 @@ $android-height: 928;
 $android-screen-width: 480;
 $android-screen-height: 800;
 
+$android-home-button-width: 86;
+$android-home-button-height: 6;
+$android-border-button-width: 2;
+
+// Device radius
+$apple-radius: 34;
+$android-radius: 20;
+
+
 
 // Devices ratios
 $iphone6-ratio: ($iphone6-height/$iphone6-width*100)+%;
 $iphone6-screen-width-container: ($iphone6-screen-width*100/$iphone6-width)+%;
 $iphone6-screen-ratio: ($iphone6-screen-height/$iphone6-screen-width*100)+%;
 $iphone6-screen-topSpacing-ratio: (64*100/$iphone6-screen-height)+%;
+$iphone6-button-ratio: ($apple-home-button*100/$iphone6-width)+%;
+$iphone6-button-bottomSpacing-ratio: (21*100/$iphone6-height)+%;
 
 $iphone5-ratio: ($iphone5-height/$iphone5-width*100)+%;
 $iphone5-screen-width-container: ($iphone5-screen-width*100/$iphone5-width)+%;
 $iphone5-screen-ratio: ($iphone5-screen-height/$iphone5-screen-width*100)+%;
 $iphone5-screen-topSpacing-ratio: (64*100/$iphone5-screen-height)+%;
+$iphone5-button-ratio: ($apple-home-button*100/$iphone5-width)+%;
+$iphone5-button-bottomSpacing-ratio: (21*100/$iphone5-height)+%;
 
 $ipad-ratio: ($ipad-height/$ipad-width*100)+%;
 $ipad-screen-width-container: ($ipad-screen-width*100/$ipad-width)+%;
 $ipad-screen-ratio: ($ipad-screen-height/$ipad-screen-width*100)+%;
 $ipad-screen-topSpacing-ratio: (30*100/$ipad-screen-height)+%;
+$ipad-button-ratio: ($apple-home-button*100/$ipad-width)+%;
+$ipad-button-leftSpacing-ratio: (15.5*100/$ipad-width)+%;
 
 $mac-ratio: ($mac-height/$mac-width*100)+%;
 $mac-screen-width-container: ($mac-screen-width*100/$mac-width)+%;
@@ -78,6 +96,10 @@ $android-ratio: ($android-height/$android-width*100)+%;
 $android-screen-width-container: ($android-screen-width*100/$android-width)+%;
 $android-screen-ratio: ($android-screen-height/$android-screen-width*100)+%;
 $android-screen-topSpacing-ratio: (64*100/$android-screen-height)+%;
+
+$android-button-width-ratio: ($android-home-button-width*100/$android-width)+%;
+$android-button-height-ratio: ($android-home-button-height*100/$android-width)+%;
+$android-button-bottomSpacing-ratio: (29*100/$android-height)+%;
 
 
 // Breakpoint
