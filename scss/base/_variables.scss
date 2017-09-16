@@ -16,3 +16,43 @@ $primaryColor: #000;
 $secondaryColor: #5C6371;
 $thirdColor: #707781;
 $fourthColor: #8891A0;
+
+// Devices widths
+$iphone6-width: 391;
+$iphone6-height: 816;
+$iphone6-sreen-width: 375;
+$iphone6-sreen-height: 667;
+
+$iphone5-width: 336;
+$iphone5-height: 717;
+$iphone5-sreen-width: 320;
+$iphone5-sreen-height: 568;
+
+$mac-width: 1280;
+$mac-height: 898;
+$mac-sreen-width: 1184;
+$mac-sreen-height: 802;
+
+
+// Devices ratios
+$iphone6-ratio: ($iphone6-height/$iphone6-width*100)+%;
+$iphone6-screen-width-container: ($iphone6-sreen-width*100/$iphone6-width)+%;
+$iphone6-screen-ratio: ($iphone6-sreen-height/$iphone6-sreen-width*100)+%;
+$iphone6-screen-topSpacing-ratio: (64*100/$iphone6-height)+%;
+
+$iphone5-ratio: ($iphone5-height/$iphone5-width*100)+%;
+$iphone5-screen-width-container: ($iphone5-sreen-width*100/$iphone5-width)+%;
+$iphone5-screen-ratio: ($iphone5-sreen-height/$iphone5-sreen-width*100)+%;
+$iphone5-screen-topSpacing-ratio: (64*100/$iphone5-height)+%;
+
+$mac-ratio: ($mac-height/$mac-width*100)+%;
+$mac-screen-width-container: ($mac-sreen-width*100/$mac-width)+%;
+$mac-screen-ratio: ($mac-sreen-height/$mac-sreen-width*100)+%;
+$mac-screen-topSpacing-ratio: (48*100/$mac-height)+%;
+
+
+// • iPhone 6 (w: 391px, h: ccc)
+// • iPhone 5 (w: 336px, h: 717px)
+// • Android Phone (w: 496px, h: 928px)
+// • iPad (w: 1280px, h: 909px)
+// • Generic (for Desktop) (w: 1280px, h: 898px)
