@@ -10,37 +10,6 @@
 	}
 }
 
-.iphone,
-.mac,
-.android,
-.ipad {
-	position: relative;
-	margin: auto;
-	> div {
-		width: 100%;
-	}
-}
-
-.iphone,
-.android {
-	display: inline-block;
-	width: 100%;
-}
-
-.screen {
-	position: absolute;
-	left: 0;
-	margin: auto;
-	right: 0;		
-}
-
-img {
-	position: absolute;
-	max-width: 100%;
-	top: 0;
-	left: 0;
-}
-
 .three-rows {
 	width: 33.33%;
 	&:first-of-type {
@@ -85,82 +54,6 @@ img {
 		@media #{$break-mobile} { 
 			padding: 0; 
 			text-align: center;
-		}
-	}
-}
-
-// Devices
-.mac {
-	max-width: $mac-width+px;
-	> div {
-		padding-bottom: $mac-ratio;
-		background-color: steelblue;			
-	}
-	.screen {
-		transform: translateY($mac-screen-topSpacing-ratio);
-		width: $mac-screen-width-container;
-		figure {
-			padding-top: $mac-screen-ratio;
-		}
-	}
-}
-
-.android {
-	> div {
-		padding-bottom: $android-ratio;
-		background-color: steelblue;			
-	}
-	.screen {
-		transform: translateY($android-screen-topSpacing-ratio);
-		width: $android-screen-width-container;
-		figure {
-			padding-top: $android-screen-ratio;
-		}
-	}
-}
-
-.ipad {
-	max-width: $ipad-width+px;
-	> div {
-		padding-bottom: $ipad-ratio;
-		background-color: steelblue;			
-	}
-	.screen {
-		transform: translateY($ipad-screen-topSpacing-ratio);
-		width: $ipad-screen-width-container;
-		figure {
-			padding-top: $ipad-screen-ratio;
-		}
-	}
-}
-
-.iphone {
-	&.v6 {
-		max-width: $iphone6-width+px;
-		> div {
-			padding-bottom: $iphone6-ratio;
-			background-color: steelblue;			
-		}
-		.screen {
-			transform: translateY($iphone6-screen-topSpacing-ratio);
-			width: $iphone6-screen-width-container;
-			figure {
-				padding-top: $iphone6-screen-ratio;
-			}
-		}
-	}
-	&.v5 {
-		max-width: $iphone5-width+px;
-		> div {
-			padding-bottom: $iphone5-ratio;
-			background-color: steelblue;			
-		}
-		.screen {
-			transform: translateY($iphone5-screen-topSpacing-ratio);
-			width: $iphone5-screen-width-container;
-			figure {
-				padding-top: $iphone5-screen-ratio;
-			}
 		}
 	}
 }

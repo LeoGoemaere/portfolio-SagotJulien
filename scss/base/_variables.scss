@@ -17,58 +17,67 @@ $secondaryColor: #5C6371;
 $thirdColor: #707781;
 $fourthColor: #8891A0;
 
+// Website background
+$website-color: #FBFCFE;
+
+// Devices colors
+$device-color: #fff;
+$device-border-color: #E5EAF0;
+
+
+
 // Devices widths
 $iphone6-width: 391;
 $iphone6-height: 816;
-$iphone6-sreen-width: 375;
-$iphone6-sreen-height: 667;
+$iphone6-screen-width: 375;
+$iphone6-screen-height: 667;
 
 $iphone5-width: 336;
 $iphone5-height: 717;
-$iphone5-sreen-width: 320;
-$iphone5-sreen-height: 568;
+$iphone5-screen-width: 320;
+$iphone5-screen-height: 568;
 
 $ipad-width: 1280;
 $ipad-height: 909;
-$ipad-sreen-width: 1132;
-$ipad-sreen-height: 849;
+$ipad-screen-width: 1132;
+$ipad-screen-height: 849;
 
 $mac-width: 1280;
 $mac-height: 898;
-$mac-sreen-width: 1184;
-$mac-sreen-height: 802;
+$mac-screen-width: 1184;
+$mac-screen-height: 802;
 
 $android-width: 496;
 $android-height: 928;
-$android-sreen-width: 480;
-$android-sreen-height: 800;
+$android-screen-width: 480;
+$android-screen-height: 800;
 
 
 // Devices ratios
 $iphone6-ratio: ($iphone6-height/$iphone6-width*100)+%;
-$iphone6-screen-width-container: ($iphone6-sreen-width*100/$iphone6-width)+%;
-$iphone6-screen-ratio: ($iphone6-sreen-height/$iphone6-sreen-width*100)+%;
-$iphone6-screen-topSpacing-ratio: (64*100/$iphone6-height)+%;
+$iphone6-screen-width-container: ($iphone6-screen-width*100/$iphone6-width)+%;
+$iphone6-screen-ratio: ($iphone6-screen-height/$iphone6-screen-width*100)+%;
+$iphone6-screen-topSpacing-ratio: (64*100/$iphone6-screen-height)+%;
 
 $iphone5-ratio: ($iphone5-height/$iphone5-width*100)+%;
-$iphone5-screen-width-container: ($iphone5-sreen-width*100/$iphone5-width)+%;
-$iphone5-screen-ratio: ($iphone5-sreen-height/$iphone5-sreen-width*100)+%;
-$iphone5-screen-topSpacing-ratio: (64*100/$iphone5-height)+%;
+$iphone5-screen-width-container: ($iphone5-screen-width*100/$iphone5-width)+%;
+$iphone5-screen-ratio: ($iphone5-screen-height/$iphone5-screen-width*100)+%;
+$iphone5-screen-topSpacing-ratio: (64*100/$iphone5-screen-height)+%;
 
 $ipad-ratio: ($ipad-height/$ipad-width*100)+%;
-$ipad-screen-width-container: ($ipad-sreen-width*100/$ipad-width)+%;
-$ipad-screen-ratio: ($ipad-sreen-height/$ipad-sreen-width*100)+%;
-$ipad-screen-topSpacing-ratio: (30*100/$ipad-height)+%;
+$ipad-screen-width-container: ($ipad-screen-width*100/$ipad-width)+%;
+$ipad-screen-ratio: ($ipad-screen-height/$ipad-screen-width*100)+%;
+$ipad-screen-topSpacing-ratio: (30*100/$ipad-screen-height)+%;
 
 $mac-ratio: ($mac-height/$mac-width*100)+%;
-$mac-screen-width-container: ($mac-sreen-width*100/$mac-width)+%;
-$mac-screen-ratio: ($mac-sreen-height/$mac-sreen-width*100)+%;
-$mac-screen-topSpacing-ratio: (48*100/$mac-height)+%;
+$mac-screen-width-container: ($mac-screen-width*100/$mac-width)+%;
+$mac-screen-ratio: ($mac-screen-height/$mac-screen-width*100)+%;
+$mac-screen-topSpacing-ratio: (48*100/$mac-screen-height)+%;
 
 $android-ratio: ($android-height/$android-width*100)+%;
-$android-screen-width-container: ($android-sreen-width*100/$android-width)+%;
-$android-screen-ratio: ($android-sreen-height/$android-sreen-width*100)+%;
-$android-screen-topSpacing-ratio: (64*100/$android-height)+%;
+$android-screen-width-container: ($android-screen-width*100/$android-width)+%;
+$android-screen-ratio: ($android-screen-height/$android-screen-width*100)+%;
+$android-screen-topSpacing-ratio: (64*100/$android-screen-height)+%;
 
 
 // Breakpoint
