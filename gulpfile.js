@@ -8,7 +8,8 @@ const gulp = require('gulp'),
 	  babel = require('gulp-babel'),
 	  uglify = require('gulp-uglify'),
 	  concat = require('gulp-concat'),
-	  sourcemaps = require('gulp-sourcemaps');
+	  sourcemaps = require('gulp-sourcemaps'),
+	  browserSync = require('browser-sync').create();
 
 
 
@@ -73,10 +74,25 @@ gulp.task('js-concat', ['js'], () => {
     .pipe(gulp.dest('./dist/js/'));
 });
 
+gulp.task('serve', () => {
+	browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.start('default');
+    gulp.watch('dist/css/*.css').on('change', browserSync.reload);
+});
+
 
 gulp.task('build', () => {
 	gulp.start(['sass-build', 'sources', 'js-build']);
 })
+
+gulp.task('default', () => {
+	gulp.start(['sass-maps', 'js-maps']);
+});
 
 gulp.task('dev', () => {
 	gulp.watch('./scss/**/*.scss', ['sass-maps']);

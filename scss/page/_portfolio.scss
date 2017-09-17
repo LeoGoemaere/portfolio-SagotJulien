@@ -3,7 +3,7 @@ body {
 }
 
 main {
-	padding:  $header-top-spacing 0 $footer-bottom-spacing;
+	padding:  $header-top-spacing $container-side-spacing $footer-bottom-spacing;
 	max-width: $website-width+px;
 	margin: auto;
 	font-size: 10px;
