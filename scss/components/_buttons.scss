@@ -1,6 +1,27 @@
 .cta {
+	$picto-size: 2em;
 	text-align: center;
+	position: relative;
+	display: inline-block;
+	padding-left: (($picto-size + 1.4em)/$cta-size)+em;
 	&:before {
 		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		width: $picto-size/$cta-size+em;
+		height: $picto-size/$cta-size+em;
+	}
+	&.watch {
+		&:before {
+			background: url("../assets/pictos/AppStore.svg") no-repeat center;	
+		}
+	}
+	&.download {
+		&:before {
+			background: url("../assets/pictos/Play.svg") no-repeat center;	
+		}
 	}
 }
