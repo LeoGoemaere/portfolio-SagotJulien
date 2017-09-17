@@ -27,7 +27,7 @@ h2 {
 	font-size: $h2-subtitle-size;
 }
 .project-year {
-	font-size: $project-year-size;
+	font-size: $project-year-size/$h2-size+em;
 }
 
 // Cta size

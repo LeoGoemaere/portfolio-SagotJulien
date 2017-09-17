@@ -248,6 +248,7 @@ img {
 		}
 	}
 	&.v5 {
+		max-width: $iphone5-width+px;
 		> .iphone {
 			&:before {
 				border-radius: percentageCornerRadiusFor($iphone5-width, $iphone5-height, $apple-radius);
@@ -267,7 +268,6 @@ img {
 					content: "";
 					width: $iphone5-button-ratio;
 					padding-top: $iphone5-button-ratio;
-					border: $apple-border-button-width+px solid red;
 					bottom: calc(#{$iphone5-button-bottomSpacing-ratio} - 2px);
 					left: 0;
 					right: 0;

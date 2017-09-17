@@ -1,13 +1,45 @@
 body {
-	// background-color: $website-color;
-	background-color: grey;
+	background-color: $website-color;
 }
 
-main {
-	max-width: 1280px;
-	margin: auto;
-}
 
 section {
+	max-width: 1280px;
+	margin: auto;
 	font-size: 10px;
+	padding: 4.9em 0 8.1em 0;
+	&.android-section {
+		max-width: 1400px;
+	}
+	> header {
+		margin-bottom: 1.4em;
+	}
+	.cta {
+		margin-top: 3.6em/$cta-size+em;
+	}
+}
+
+.row {
+	+ .row {
+		margin-top: 5.4em;
+	}
+}
+
+.header {
+	max-width: 1280px;
+	margin: auto;
+	font-size: 10px;
+	margin-bottom: 5.2em;
+}
+
+h2 {
+	line-height: 1em;
+}
+
+.project-year {
+	float: right;
+	@media #{$break-mobile} { 
+		float: none;
+		display: block;
+	}
 }
