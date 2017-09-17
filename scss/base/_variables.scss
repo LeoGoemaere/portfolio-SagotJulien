@@ -1,14 +1,23 @@
+$scale-factor: .75;
+
 // texts sizes 
-$h1-size: 10em;
-$h1-subtitle-size: 5.4em;
+$h1-size: 10em*$scale-factor;
+$h1-subtitle-size: 5.4em*$scale-factor;
 
-$h2-size: 3.8em;
-$h2-subtitle-size: 2.8em;
-$project-year-size: 2.8em;
+$h2-size: 3.8em*$scale-factor;
+$h2-subtitle-size: 2.8em*$scale-factor;
+$project-year-size: 2.8em*$scale-factor;
 
-$cta-size: 2em;
+$cta-size: 2em*$scale-factor;
 
-$footer-size: 2em;
+$footer-size: 2em*$scale-factor;
+
+// Spaces
+$header-top-spacing: 28.4em*$scale-factor;
+$footer-bottom-spacing: 13.4em*$scale-factor;
+$section-bottom-spacing: 8.1em*$scale-factor;
+$footer-content-top-spacing: 6.8em*$scale-factor;
+
 
 // Colors
 $tintColor: #34AADC; 
@@ -16,91 +25,110 @@ $primaryColor: #000;
 $secondaryColor: #5C6371;
 $thirdColor: #707781;
 $fourthColor: #8891A0;
+$devider-color: rgba(0, 0, 0, 0.1);
 
 // Website background
 $website-color: #FBFCFE;
+
+// Website-container
+$website-width: 1280*$scale-factor;
 
 // Devices colors
 $device-color: #fff;
 $device-border-color: #E5EAF0;
 
+// Devices borders
+$button-border: 2px*$scale-factor;
+
 
 
 // Devices widths
-$iphone6-width: 391;
-$iphone6-height: 816;
-$iphone6-screen-width: 375;
-$iphone6-screen-height: 667;
+$iphone6-width: 391*$scale-factor;
+$iphone6-height: 816*$scale-factor;
+$iphone6-screen-width: 375*$scale-factor;
+$iphone6-screen-height: 667*$scale-factor;
 
-$iphone5-width: 336;
-$iphone5-height: 717;
-$iphone5-screen-width: 320;
-$iphone5-screen-height: 568;
+$iphone5-width: 336*$scale-factor;
+$iphone5-height: 717*$scale-factor;
+$iphone5-screen-width: 320*$scale-factor;
+$iphone5-screen-height: 568*$scale-factor;
 
-$apple-home-button: 43;
-$apple-border-button-width: 2;
+$apple-home-button: 43*$scale-factor;
+$apple-border-button-width: 2*$scale-factor;
 
-$ipad-width: 1280;
-$ipad-height: 909;
-$ipad-screen-width: 1132;
-$ipad-screen-height: 849;
+$ipad-width: 1280*$scale-factor;
+$ipad-height: 909*$scale-factor;
+$ipad-screen-width: 1132*$scale-factor;
+$ipad-screen-height: 849*$scale-factor;
 
-$mac-width: 1280;
-$mac-height: 898;
-$mac-screen-width: 1184;
-$mac-screen-height: 802;
+$mac-width: 1280*$scale-factor;
+$mac-height: 898*$scale-factor;
+$mac-screen-width: 1184*$scale-factor;
+$mac-screen-height: 802*$scale-factor;
 
-$android-width: 496;
-$android-height: 928;
-$android-screen-width: 480;
-$android-screen-height: 800;
+$android-width: 496*$scale-factor;
+$android-height: 928*$scale-factor;
+$android-screen-width: 480*$scale-factor;
+$android-screen-height: 800*$scale-factor;
 
-$android-home-button-width: 86;
-$android-home-button-height: 6;
-$android-border-button-width: 2;
+$android-home-button-width: 86*$scale-factor;
+$android-home-button-height: 6*$scale-factor;
+$android-border-button-width: 2*$scale-factor;
 
 // Device radius
-$apple-radius: 34;
-$android-radius: 20;
-$devices-screens-radius: 6;
-$android-button-inset-radius: 1.5;
-$android-button-outset-radius: 3.5;
+$apple-radius: 34*$scale-factor;
+$android-radius: 20*$scale-factor;
+$devices-screens-radius: 6*$scale-factor;
+$android-button-inset-radius: 1.5*$scale-factor;
+$android-button-outset-radius: 3.5*$scale-factor;
+
+// Frames paddings
+$smarphone-screen-top-spacing: 64*$scale-factor;
+
+$iphone-button-bottom-spacing: 21*$scale-factor;
+
+$ipad-button-left-spacing: 15.5*$scale-factor;
+$ipad-screen-top-spacing: 30*$scale-factor;
+
+$mac-screen-top-spacing: 48*$scale-factor;
+
+$android-button-bottom-spacing: 29*$scale-factor;
 
 // Devices ratios
 $iphone6-ratio: ratioFor($iphone6-height, $iphone6-width);
 $iphone6-screen-width-container: ratioFor($iphone6-screen-width, $iphone6-width);
 $iphone6-screen-ratio: ratioFor($iphone6-screen-height, $iphone6-screen-width);
-$iphone6-screen-topSpacing-ratio: ratioFor(64, $iphone6-screen-height);
+$iphone6-screen-topSpacing-ratio: ratioFor($smarphone-screen-top-spacing, $iphone6-screen-height);
 $iphone6-button-ratio: ratioFor($apple-home-button, $iphone6-width);
-$iphone6-button-bottomSpacing-ratio: ratioFor(21, $iphone6-height);
+$iphone6-button-bottomSpacing-ratio: ratioFor($iphone-button-bottom-spacing, $iphone6-height);
 
 $iphone5-ratio: ratioFor($iphone5-height, $iphone5-width);
 $iphone5-screen-width-container: ratioFor($iphone5-screen-width, $iphone5-width);
 $iphone5-screen-ratio: ratioFor($iphone5-screen-height, $iphone5-screen-width);
-$iphone5-screen-topSpacing-ratio: ratioFor(64, $iphone5-screen-height);
+$iphone5-screen-topSpacing-ratio: ratioFor($smarphone-screen-top-spacing, $iphone5-screen-height);
 $iphone5-button-ratio: ratioFor($apple-home-button, $iphone5-width);
-$iphone5-button-bottomSpacing-ratio: ratioFor(21, $iphone5-height);
+$iphone5-button-bottomSpacing-ratio: ratioFor($iphone-button-bottom-spacing, $iphone5-height);
 
 $ipad-ratio: ratioFor($ipad-height, $ipad-width);
 $ipad-screen-width-container: ratioFor($ipad-screen-width, $ipad-width);
 $ipad-screen-ratio: ratioFor($ipad-screen-height, $ipad-screen-width);
-$ipad-screen-topSpacing-ratio: ratioFor(30, $ipad-screen-height);
+$ipad-screen-topSpacing-ratio: ratioFor($ipad-screen-top-spacing, $ipad-screen-height);
 $ipad-button-ratio: ratioFor($apple-home-button, $ipad-width);
-$ipad-button-leftSpacing-ratio: ratioFor(15.5, $ipad-width);
+$ipad-button-leftSpacing-ratio: ratioFor($ipad-button-left-spacing, $ipad-width);
 
 $mac-ratio: ratioFor($mac-height, $mac-width);
 $mac-screen-width-container: ratioFor($mac-screen-width, $mac-width);
 $mac-screen-ratio: ratioFor($mac-screen-height, $mac-screen-width);
-$mac-screen-topSpacing-ratio: ratioFor(48, $mac-screen-height);
+$mac-screen-topSpacing-ratio: ratioFor($mac-screen-top-spacing, $mac-screen-height);
 
 $android-ratio: ratioFor($android-height, $android-width);
 $android-screen-width-container: ratioFor($android-screen-width, $android-width);
 $android-screen-ratio: ratioFor($android-screen-height, $android-screen-width);
-$android-screen-topSpacing-ratio: ratioFor(64, $android-screen-height);
+$android-screen-topSpacing-ratio: ratioFor($smarphone-screen-top-spacing, $android-screen-height);
 
 $android-button-width-ratio: ratioFor($android-home-button-width, $android-width);
 $android-button-height-ratio: ratioFor($android-home-button-height, $android-width);
-$android-button-bottomSpacing-ratio: ratioFor(29, $android-height);
+$android-button-bottomSpacing-ratio: ratioFor($android-button-bottom-spacing, $android-height);
 
 
 // Breakpoint

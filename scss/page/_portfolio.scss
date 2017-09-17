@@ -3,20 +3,16 @@ body {
 }
 
 main {
-	padding:  8em 0 10em;
+	padding:  $header-top-spacing 0 $footer-bottom-spacing;
+	max-width: $website-width+px;
+	margin: auto;
+	font-size: 10px;
 }
 
 section {
-	max-width: 1280px;
-	margin: auto;
 	font-size: 10px;
-	padding: 4.9em 0 8.1em 0;
-	&.android-section {
-		max-width: 1400px;
-	}
+	padding: 4.9em 0 $section-bottom-spacing 0;
 	> header {
-		max-width: 1280px;
-		margin: auto;
 		margin-bottom: 1.4em;
 	}
 	.cta {
@@ -31,10 +27,9 @@ section {
 }
 
 .header {
-	max-width: 1280px;
-	margin: auto;
 	font-size: 10px;
-	margin-bottom: 5.2em;
+	padding-bottom: 5.2em;
+	border-bottom: 2px solid $devider-color;
 }
 
 h2 {
@@ -50,10 +45,9 @@ h2 {
 }
 
 footer {
-	max-width: 1280px;
-	margin: auto;
 	text-align: center;
 	font-size: 10px;
-	border-top: 1px solid $device-border-color;
-	padding-top: 4em;
+	border-top: 2px solid $devider-color;
+	padding-top: $footer-content-top-spacing;
+	margin-top: $section-bottom-spacing;
 }

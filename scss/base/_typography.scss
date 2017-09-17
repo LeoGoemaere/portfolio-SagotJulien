@@ -7,7 +7,7 @@ body {
 // h1 & subtitle sizes
 h1 {
 	font-size: $h1-size;
-	font-weight: 500;
+	font-weight: 600;
 	> span {
 		font-weight: 700;
 	}
@@ -21,13 +21,14 @@ h1 {
 // h2 & subtitle sizes
 h2 {
 	font-size: $h2-size;
-	font-weight: 900;
+	font-weight: 700;
 }
 .h2-subtitle {
 	font-size: $h2-subtitle-size;
 }
 .project-year {
 	font-size: $project-year-size/$h2-size+em;
+	font-weight: normal;
 }
 
 // Cta size
@@ -40,7 +41,7 @@ h2 {
 // Footer size
 .crew {
 	font-size: $footer-size;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .developer-name {
