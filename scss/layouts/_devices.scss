@@ -15,13 +15,7 @@
 	margin: auto;
 	&:before {
 		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		border: $button-border solid $device-border-color;
-		z-index: 1;
+		@include external-border($button-border, $device-border-color);
 		
 	}
 	> .device {
@@ -70,14 +64,17 @@ figure {
 	&:before {
 		content: "";
 		@include external-border(1.5, $device-border-color);
+		z-index: 1;
 	}
 }
 
+video,
 img {
 	position: absolute;
 	max-width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 2;
 }
 
 .mac-container {
@@ -101,7 +98,8 @@ img {
 				}
 			}
 		}
-		img {
+		img,
+		video {
 			border-radius: percentageCornerRadiusFor($mac-screen-width, $mac-screen-height, $devices-screens-radius);
 		}
 	}
@@ -141,7 +139,7 @@ img {
 				border-radius: percentageCornerRadiusFor(90, 10, $android-button-outset-radius);
 				left: 0;
 				right: 0;
-				bottom: calc(#{$android-button-bottomSpacing-ratio} - #{$button-border});
+				bottom: calc(#{$android-button-bottomSpacing-ratio} - #{$button-border}px);
 			}
 		}
 		.screen {
@@ -154,7 +152,8 @@ img {
 				}
 			}
 		}
-		img {
+		img,
+		video {
 			border-radius: percentageCornerRadiusFor($android-screen-width, $android-screen-height, $devices-screens-radius);
 		}
 	}
@@ -182,7 +181,7 @@ img {
 				content: "";
 				width: $ipad-button-ratio;
 				padding-top: $ipad-button-ratio;
-				left: calc(#{$ipad-button-leftSpacing-ratio} - #{$button-border});
+				left: calc(#{$ipad-button-leftSpacing-ratio} - #{$button-border}px);
 				top: 0;
 				bottom: 0;
 				height: 0;
@@ -198,7 +197,8 @@ img {
 				}
 			}
 		}
-		img {
+		img,
+		video {
 			border-radius: percentageCornerRadiusFor($ipad-screen-width, $ipad-screen-height, $devices-screens-radius);
 		}
 	}
@@ -227,7 +227,7 @@ img {
 					content: "";
 					width: $iphone6-button-ratio;
 					padding-top: $iphone6-button-ratio;
-					bottom: calc(#{$iphone6-button-bottomSpacing-ratio} - #{$button-border});
+					bottom: calc(#{$iphone6-button-bottomSpacing-ratio} - #{$button-border}px);
 					left: 0;
 					right: 0;
 				}
@@ -242,7 +242,8 @@ img {
 					}
 				}
 			}
-			img {
+			img,
+			video {
 				border-radius: percentageCornerRadiusFor($iphone6-screen-width, $iphone6-screen-height, $devices-screens-radius);
 			}
 		}
@@ -268,7 +269,7 @@ img {
 					content: "";
 					width: $iphone5-button-ratio;
 					padding-top: $iphone5-button-ratio;
-					bottom: calc(#{$iphone5-button-bottomSpacing-ratio} - #{$button-border});
+					bottom: calc(#{$iphone5-button-bottomSpacing-ratio} - #{$button-border}px);
 					left: 0;
 					right: 0;
 				}
@@ -283,7 +284,8 @@ img {
 					}
 				}
 			}
-			img {
+			img,
+			video {
 				border-radius: percentageCornerRadiusFor($iphone5-screen-width, $iphone5-screen-height, $devices-screens-radius);
 			}
 		}

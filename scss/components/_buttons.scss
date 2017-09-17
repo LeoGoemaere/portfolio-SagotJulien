@@ -5,11 +5,11 @@
 	display: inline-block;
 	padding-left: (($picto-size + 1.4em)/$cta-size)+em;
 	+ .cta {
-		margin-left: 4em/$cta-size+em;
+		margin-left: 6.4em/$cta-size+em;
 		&:after {
 			content: "";
 			position: absolute;
-			left: -1em;
+			left: -3.2em/$cta-size+em;
 			top: 0;
 			bottom: 0;
 			width: 1px;

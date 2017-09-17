@@ -39,7 +39,7 @@ $device-color: #fff;
 $device-border-color: #E5EAF0;
 
 // Devices borders
-$button-border: 2px*$scale-factor;
+$button-border: 2*$scale-factor;
 
 
 
@@ -102,6 +102,7 @@ $iphone6-screen-ratio: ratioFor($iphone6-screen-height, $iphone6-screen-width);
 $iphone6-screen-topSpacing-ratio: ratioFor($smarphone-screen-top-spacing, $iphone6-screen-height);
 $iphone6-button-ratio: ratioFor($apple-home-button, $iphone6-width);
 $iphone6-button-bottomSpacing-ratio: ratioFor($iphone-button-bottom-spacing, $iphone6-height);
+$iphone6-border-ratio: ratioFor($apple-home-button, $iphone6-width);
 
 $iphone5-ratio: ratioFor($iphone5-height, $iphone5-width);
 $iphone5-screen-width-container: ratioFor($iphone5-screen-width, $iphone5-width);

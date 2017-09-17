@@ -1,5 +1,6 @@
 body {
 	background-color: $website-color;
+
 }
 
 main {
@@ -13,7 +14,7 @@ section {
 	font-size: 10px;
 	padding: 4.9em 0 $section-bottom-spacing 0;
 	> header {
-		margin-bottom: 1.4em;
+		margin-bottom: 3.2em;
 	}
 	.cta {
 		margin-top: 3.6em/$cta-size+em;
@@ -34,6 +35,10 @@ section {
 
 h2 {
 	line-height: 1em;
+}
+
+.h2-subtitle {
+	margin-top: 0.4em;
 }
 
 .project-year {
