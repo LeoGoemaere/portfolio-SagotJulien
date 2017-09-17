@@ -1,0 +1,9 @@
+@mixin external-border($borderWidth, $border-color) {
+	position: absolute;
+	left: -#{$borderWidth}px;
+	right: -#{$borderWidth}px;
+	top: -#{$borderWidth}px;
+	bottom: -#{$borderWidth}px;
+	border: $borderWidth+px solid $border-color;
+	z-index: 1;
+}
