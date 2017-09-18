@@ -4,7 +4,7 @@ body {
 }
 
 main {
-	padding:  $header-top-spacing $container-side-spacing $footer-bottom-spacing;
+	padding:  $main-padding-top-spacing $main-padding-side-spacing $main-padding-bottom-spacing;
 	max-width: $website-width+px;
 	margin: auto;
 	font-size: 10px;
@@ -12,24 +12,24 @@ main {
 
 section {
 	font-size: 10px;
-	padding: 4.9em 0 $section-bottom-spacing 0;
+	padding: 4.9em 0 $section-padding-upperBottom-spacing 0;
 	> header {
-		margin-bottom: 3.2em;
+		margin-bottom: $section-header-margin-bottom-spacing;
 	}
 	.cta {
-		margin-top: 3.6em/$cta-size+em;
+		margin-top: $cta-margin-top-spacing/$cta-size+em;
 	}
 }
 
 .row {
 	+ .row {
-		margin-top: 5.4em;
+		margin-top: $row-margin-top-spacing;
 	}
 }
 
 .header {
 	font-size: 10px;
-	padding-bottom: 5.2em;
+	padding-bottom: $header-padding-bottom-spacing;
 	border-bottom: 2px solid $devider-color;
 }
 
@@ -38,7 +38,7 @@ h2 {
 }
 
 .h2-subtitle {
-	margin-top: 0.4em;
+	margin-top: $plateform-margin-top-spacing;
 }
 
 .project-year {
@@ -53,6 +53,6 @@ footer {
 	text-align: center;
 	font-size: 10px;
 	border-top: 2px solid $devider-color;
-	padding-top: $footer-content-top-spacing;
-	margin-top: $section-bottom-spacing;
+	padding-top: $footer-padding-top-spacing;
+	margin-top: $footer-margin-top-spacing;
 }

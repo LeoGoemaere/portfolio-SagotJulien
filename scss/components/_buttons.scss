@@ -1,9 +1,9 @@
 .cta {
-	$picto-size: 2.8em;
+	$picto-dimension: 2.8em;
 	text-align: center;
 	position: relative;
 	display: inline-block;
-	padding-left: (($picto-size + 1.4em)/$cta-size)+em;
+	padding-left: (($picto-dimension + 1.4em)/$cta-size)+em;
 	+ .cta {
 		margin-left: 6.4em/$cta-size+em;
 		&:after {
@@ -23,8 +23,8 @@
 		bottom: 0;
 		top: 0;
 		margin: auto;
-		width: $picto-size/$cta-size+em;
-		height: $picto-size/$cta-size+em;
+		width: $picto-dimension/$cta-size+em;
+		height: $picto-dimension/$cta-size+em;
 	}
 	&.watch {
 		&:before {

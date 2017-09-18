@@ -13,11 +13,20 @@ $cta-size: 2em*$scale-factor;
 $footer-size: 2em*$scale-factor;
 
 // Spaces
-$header-top-spacing: 28.4em*$scale-factor;
-$footer-bottom-spacing: 13.4em*$scale-factor;
-$container-side-spacing: 6em*$scale-factor;
-$section-bottom-spacing: 8.1em*$scale-factor;
-$footer-content-top-spacing: 6.8em*$scale-factor;
+$main-padding-top-spacing: 28.4em*$scale-factor;
+$main-padding-bottom-spacing: 13.4em*$scale-factor;
+$main-padding-side-spacing: 6em*$scale-factor;
+$section-padding-upperBottom-spacing: 8.1em*$scale-factor;
+$row-margin-top-spacing: 5.4em*$scale-factor;
+$footer-padding-top-spacing: 6.8em*$scale-factor;
+$footer-margin-top-spacing: 6.8em*$scale-factor;
+$header-padding-bottom-spacing: 5.2em*$scale-factor;
+$section-header-margin-bottom-spacing: 3.2em*$scale-factor;
+$plateform-margin-top-spacing: 0.4em*$scale-factor;
+$cta-margin-top-spacing: 3.6em*$scale-factor;
+
+
+
 
 
 // Colors

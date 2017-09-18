@@ -56,6 +56,12 @@
 		text-align: center;
 		padding: 0;
 	}
+	+ .two-cols,
+	+ .three-cols {
+		@media #{$break-mobile} {
+			margin-top: 5.4em;
+		}
+	}
 }
 
 .clearfix {
