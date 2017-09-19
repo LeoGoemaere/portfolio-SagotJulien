@@ -143,4 +143,7 @@ $android-button-bottomSpacing-ratio: ratioFor($android-button-bottom-spacing, $a
 
 
 // Breakpoint
+$break-tablet: "screen and (max-width : 768px)";
 $break-mobile: "screen and (max-width : 480px)";
+$break-xs-mobile: "screen and (max-width : 360px)";
+

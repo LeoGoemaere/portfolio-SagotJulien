@@ -8,8 +8,8 @@ main,
 section,
 footer {
 	font-size: 10px;
-	@media #{$break-mobile} { 
-		font-size: 8px;
+	@media #{$break-tablet} { 
+		font-size: 9px;
 	}
 }
 
@@ -38,6 +38,12 @@ section {
 .header {
 	padding-bottom: $header-padding-bottom-spacing;
 	border-bottom: 2px solid $devider-color;
+	@media #{$break-mobile} { 
+		font-size: 6px;
+	}
+	@media #{$break-xs-mobile} { 
+		font-size: 5px;
+	}
 }
 
 h2 {
@@ -50,10 +56,6 @@ h2 {
 
 .project-year {
 	float: right;
-	@media #{$break-mobile} { 
-		float: none;
-		display: block;
-	}
 }
 
 footer {
