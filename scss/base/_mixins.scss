@@ -6,3 +6,12 @@
 	bottom: -#{$borderWidth}px;
 	border: $borderWidth+px solid $border-color;
 }
+
+@mixin internal-border($borderWidth, $border-color) {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border: $borderWidth+px solid $border-color;
+}
