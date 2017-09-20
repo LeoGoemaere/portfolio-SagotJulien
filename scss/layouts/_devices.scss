@@ -13,6 +13,7 @@ img {
 }
 
 .device {
+	box-shadow: 0 8px 40px 0 rgba(219,226,238,0.18);
 	&:before {
 		content: "";
 		@include internal-border($button-border, $device-border-color);
