@@ -14,6 +14,7 @@ img {
 
 .device {
 	box-shadow: 0 8px 40px 0 rgba(219,226,238,0.18);
+	position: relative;
 	&:before {
 		content: "";
 		@include internal-border($button-border, $device-border-color);
@@ -84,7 +85,12 @@ img {
 			padding-top: $iphonev6-photo-ratio;
 			left: $iphonev6-photo-leftSpacing-ratio;
 			top: $iphonev6-speaker-topSpacing-ratio;
-			transform: translateY(-25%);
+			transform: translateY(-16%);
+			background: url('../assets/pictos/iPhone6_camera.svg') no-repeat;
+			background-size: cover;
+			&:before {
+				content: none;
+			}
 		}
 		.speaker {
 			top: $iphonev6-speaker-topSpacing-ratio;
@@ -135,6 +141,11 @@ img {
 			transform: translateX(-50%);
 			top: $iphonev5-photo-topSpacing-ratio;
 			margin: auto;
+			background: url('../assets/pictos/iPhone6_camera.svg') no-repeat;
+			background-size: cover;
+			&:before {
+				content: none;
+			}
 		}
 		.speaker {
 			position: absolute;
