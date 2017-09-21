@@ -64,3 +64,22 @@ footer {
 	padding-top: $footer-padding-top-spacing;
 	margin-top: $footer-margin-top-spacing;
 }
+
+.animate-device {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	&.activated {
+		animation-name: scaleUp;
+		animation-duration: 2s;
+		animation-delay: 0s;
+		animation-fill-mode: forwards;		
+	}
+	&.desactivated {
+		animation-name: scaleDown;
+		animation-duration: 2s;
+		animation-delay: 0s;
+		animation-fill-mode: forwards;	
+	}
+}
