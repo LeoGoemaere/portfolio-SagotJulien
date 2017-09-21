@@ -4,8 +4,18 @@
 	position: relative;
 	display: inline-block;
 	padding-left: (($picto-dimension + 1.4em)/$cta-size)+em;
+	@media #{$break-mobile} { 
+		display: block;
+		max-width: 115px;
+		margin-right: auto;
+		margin-left: auto;
+	}
 	+ .cta {
 		margin-left: 6.4em/$cta-size+em;
+		@media #{$break-mobile} { 
+			display: block;
+			margin-left: auto;
+		}
 		&:after {
 			content: "";
 			position: absolute;
@@ -14,6 +24,9 @@
 			bottom: 0;
 			width: 1px;
 			background-color: $device-border-color;
+			@media #{$break-mobile} { 
+				content: none;
+			}
 		}
 	}
 	&:before {
