@@ -71,37 +71,37 @@ $iphonev5-photo: 14*$scale-factor;
 $iphonev5-speaker-width: 64*$scale-factor;
 $iphonev5-speaker-height: 8*$scale-factor;
 
-$ipad2-width: 1280*$scale-factor;
-$ipad2-height: 854*$scale-factor;
-$ipad2-screen-width: 1024*$scale-factor;
-$ipad2-screen-height: 768*$scale-factor;
-$ipad2-home-button: 62*$scale-factor;
-$ipad2-photo: 16*$scale-factor;
+$ipad-width: 1280*$scale-factor;
+$ipad-height: 854*$scale-factor;
+$ipad-screen-width: 1024*$scale-factor;
+$ipad-screen-height: 768*$scale-factor;
+$ipad-home-button: 62*$scale-factor;
+$ipad-photo: 16*$scale-factor;
 
-$android2-width: 380*$scale-factor;
-$android2-height: 752*$scale-factor;
-$android2-screen-width: 336*$scale-factor;
-$android2-screen-height: 560*$scale-factor;
-$android2-home-button-width: 86*$scale-factor;
-$android2-home-button-height: 30*$scale-factor;
-$android2-photo: 12*$scale-factor;
-$android2-speaker-width: 160*$scale-factor;
-$android2-speaker-height: 8*$scale-factor;
+$android-width: 380*$scale-factor;
+$android-height: 752*$scale-factor;
+$android-screen-width: 336*$scale-factor;
+$android-screen-height: 560*$scale-factor;
+$android-home-button-width: 86*$scale-factor;
+$android-home-button-height: 30*$scale-factor;
+$android-photo: 12*$scale-factor;
+$android-speaker-width: 160*$scale-factor;
+$android-speaker-height: 8*$scale-factor;
 
-$mac2-width: 1280*$scale-factor;
-$mac2-height: 898*$scale-factor;
-$mac2-screen-width: 1184*$scale-factor;
-$mac2-screen-height: 802*$scale-factor;
-$mac2-home-button: 62*$scale-factor;
-$mac2-photo: 8*$scale-factor;
+$mac-width: 1280*$scale-factor;
+$mac-height: 898*$scale-factor;
+$mac-screen-width: 1184*$scale-factor;
+$mac-screen-height: 802*$scale-factor;
+$mac-home-button: 62*$scale-factor;
+$mac-photo: 8*$scale-factor;
 
 // Device radius
 $iphonev6-radius: 60*$scale-factor;
 $iphonev5-radius: 49*$scale-factor;
-$ipad2-radius: 64*$scale-factor;
-$android2-radius: 44*$scale-factor;
+$ipad-radius: 64*$scale-factor;
+$android-radius: 44*$scale-factor;
 $speaker-radius: 4*$scale-factor;
-$mac2-radius: 40*$scale-factor;
+$mac-radius: 40*$scale-factor;
 
 // Frames paddings
 $iphonev6-button-bottom-spacing: 20*$scale-factor;
@@ -111,31 +111,31 @@ $iphonev5-button-bottom-spacing: 22*$scale-factor;
 $iphonev5-speaker-top-spacing: 58*$scale-factor;
 $iphonev5-photo-top-spacing: 26*$scale-factor;
 $iphonev5-left-space-photo: 175*$scale-factor;
-$ipad2-button-left-spacing: 34*$scale-factor;
-$ipad2-screen-left-spacing: 136*$scale-factor;
-$ipad2-photo-top-spacing: 419*$scale-factor;
-$ipad2-right-space-photo: 54*$scale-factor;
-$android2-button-bottom-spacing: 30*$scale-factor;
-$android2-speaker-top-spacing: 46*$scale-factor;
-$android2-left-space-speaker: 96*$scale-factor;
-$android2-right-space-photo: 97*$scale-factor;
-$mac2-photo-top-spacing: 26*$scale-factor;
+$ipad-button-left-spacing: 34*$scale-factor;
+$ipad-screen-left-spacing: 136*$scale-factor;
+$ipad-photo-top-spacing: 419*$scale-factor;
+$ipad-right-space-photo: 54*$scale-factor;
+$android-button-bottom-spacing: 30*$scale-factor;
+$android-speaker-top-spacing: 46*$scale-factor;
+$android-left-space-speaker: 96*$scale-factor;
+$android-right-space-photo: 97*$scale-factor;
+$mac-photo-top-spacing: 26*$scale-factor;
 
 // Devices ratios
-$ipad2-ratio: ratioFor($ipad2-height, $ipad2-width);
-$ipad2-screen-width-container: ratioFor($ipad2-screen-width, $ipad2-width);
-$ipad2-screen-ratio: ratioFor($ipad2-screen-height, $ipad2-screen-width);
-$ipad2-photo-topSpacing-ratio: ratioFor($ipad2-photo-top-spacing, $ipad2-height);
-$ipad2-photo-ratio: ratioFor($ipad2-photo, $ipad2-width);
-$ipad2-photo-rightSpacing-ratio: ratioFor($ipad2-right-space-photo, $ipad2-width);
-$ipad2-button-ratio: ratioFor($ipad2-home-button, $ipad2-width);
-$ipad2-button-leftSpacing-ratio: ratioFor($ipad2-button-left-spacing, $ipad2-width);
+$ipad-ratio: ratioFor($ipad-height, $ipad-width);
+$ipad-screen-width-container: ratioFor($ipad-screen-width, $ipad-width);
+$ipad-screen-ratio: ratioFor($ipad-screen-height, $ipad-screen-width);
+$ipad-photo-topSpacing-ratio: ratioFor($ipad-photo-top-spacing, $ipad-height);
+$ipad-photo-ratio: ratioFor($ipad-photo, $ipad-width);
+$ipad-photo-rightSpacing-ratio: ratioFor($ipad-right-space-photo, $ipad-width);
+$ipad-button-ratio: ratioFor($ipad-home-button, $ipad-width);
+$ipad-button-leftSpacing-ratio: ratioFor($ipad-button-left-spacing, $ipad-width);
 
-$mac2-ratio: ratioFor($mac2-height, $mac2-width);
-$mac2-screen-width-container: ratioFor($mac2-screen-width, $mac2-width);
-$mac2-screen-ratio: ratioFor($mac2-screen-height, $mac2-screen-width);
-$mac2-photo-topSpacing-ratio: ratioFor($mac2-photo-top-spacing, $mac2-height);
-$mac2-photo-ratio: ratioFor($mac2-photo, $mac2-width);
+$mac-ratio: ratioFor($mac-height, $mac-width);
+$mac-screen-width-container: ratioFor($mac-screen-width, $mac-width);
+$mac-screen-ratio: ratioFor($mac-screen-height, $mac-screen-width);
+$mac-photo-topSpacing-ratio: ratioFor($mac-photo-top-spacing, $mac-height);
+$mac-photo-ratio: ratioFor($mac-photo, $mac-width);
 
 $iphonev6-ratio: ratioFor($iphonev6-height, $iphonev6-width);
 $iphonev6-screen-width-container: ratioFor($iphonev6-screen-width, $iphonev6-width);
@@ -160,18 +160,18 @@ $iphonev5-photo-leftSpacing-ratio: ratioFor($iphonev5-left-space-photo, $iphonev
 $iphonev5-button-ratio: ratioFor($iphonev5-home-button, $iphonev5-width);
 $iphonev5-button-bottomSpacing-ratio: ratioFor($iphonev5-button-bottom-spacing, $iphonev5-height);
 
-$android2-ratio: ratioFor($android2-height, $android2-width);
-$android2-screen-width-container: ratioFor($android2-screen-width, $android2-width);
-$android2-screen-ratio: ratioFor($android2-screen-height, $android2-screen-width);
-$android2-speaker-topSpacing-ratio: ratioFor($android2-speaker-top-spacing, $android2-height);
-$android2-speaker-width-container: ratioFor($android2-speaker-width, $android2-width);
-$android2-speaker-leftSpacing-ratio: ratioFor($android2-left-space-speaker, $android2-width);
-$android2-speaker-ratio: ratioFor($android2-speaker-height, $android2-width);
-$android2-photo-ratio: ratioFor($android2-photo, $android2-width);
-$android2-photo-rightSpacing-ratio: ratioFor($android2-right-space-photo, $android2-width);
-$android2-button-bottomSpacing-ratio: ratioFor($android2-button-bottom-spacing, $android2-height);
-$android2-button-width-ratio: ratioFor($android2-home-button-width, $android2-width);
-$android2-button-height-ratio: ratioFor($android2-home-button-height, $android2-width);
+$android-ratio: ratioFor($android-height, $android-width);
+$android-screen-width-container: ratioFor($android-screen-width, $android-width);
+$android-screen-ratio: ratioFor($android-screen-height, $android-screen-width);
+$android-speaker-topSpacing-ratio: ratioFor($android-speaker-top-spacing, $android-height);
+$android-speaker-width-container: ratioFor($android-speaker-width, $android-width);
+$android-speaker-leftSpacing-ratio: ratioFor($android-left-space-speaker, $android-width);
+$android-speaker-ratio: ratioFor($android-speaker-height, $android-width);
+$android-photo-ratio: ratioFor($android-photo, $android-width);
+$android-photo-rightSpacing-ratio: ratioFor($android-right-space-photo, $android-width);
+$android-button-bottomSpacing-ratio: ratioFor($android-button-bottom-spacing, $android-height);
+$android-button-width-ratio: ratioFor($android-home-button-width, $android-width);
+$android-button-height-ratio: ratioFor($android-home-button-height, $android-width);
 
 
 // Breakpoint

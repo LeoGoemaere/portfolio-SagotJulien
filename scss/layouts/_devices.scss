@@ -182,35 +182,35 @@ img {
 		}
 	}
 	&.ipad {
-		max-width: $ipad2-width+px;
+		max-width: $ipad-width+px;
 		.device {
-			padding-bottom: $ipad2-ratio;
+			padding-bottom: $ipad-ratio;
 			background-color: $device-color;
-			border-radius: percentageCornerRadiusFor($ipad2-width, $ipad2-height, $ipad2-radius);
+			border-radius: percentageCornerRadiusFor($ipad-width, $ipad-height, $ipad-radius);
 			&:before {
-				border-radius: percentageCornerRadiusFor($ipad2-width, $ipad2-height, $ipad2-radius);
+				border-radius: percentageCornerRadiusFor($ipad-width, $ipad-height, $ipad-radius);
 			}
 		}
 		.sensor {
-			width: $ipad2-photo-ratio;
-			padding-top: $ipad2-photo-ratio;
-			right: $ipad2-photo-rightSpacing-ratio;
+			width: $ipad-photo-ratio;
+			padding-top: $ipad-photo-ratio;
+			right: $ipad-photo-rightSpacing-ratio;
 			top: 50%;
 			transform: translateY(-50%);
 			margin: auto;
 		}
 		.screen {
-			width: $ipad2-screen-width-container;
+			width: $ipad-screen-width-container;
 			> figure {
-				padding-top: $ipad2-screen-ratio;
+				padding-top: $ipad-screen-ratio;
 			}
 		}
 		.home-button {
 			position: absolute;
-			width: $ipad2-button-ratio;
-			padding-top: $ipad2-button-ratio;
+			width: $ipad-button-ratio;
+			padding-top: $ipad-button-ratio;
 			background-color: $website-color;
-			left: $ipad2-button-leftSpacing-ratio;
+			left: $ipad-button-leftSpacing-ratio;
 			margin: auto;
 			top: 50%;
 			transform: translateY(-50%);
@@ -221,75 +221,75 @@ img {
 		}
 	}
 	&.android {
-		max-width: $android2-width+px;
+		max-width: $android-width+px;
 		.device {
-			padding-bottom: $android2-ratio;
+			padding-bottom: $android-ratio;
 			background-color: $device-color;
-			border-radius: percentageCornerRadiusFor($android2-width, $android2-height, $android2-radius);
+			border-radius: percentageCornerRadiusFor($android-width, $android-height, $android-radius);
 			&:before {
-				border-radius: percentageCornerRadiusFor($android2-width, $android2-height, $android2-radius);
+				border-radius: percentageCornerRadiusFor($android-width, $android-height, $android-radius);
 			}
 		}
 		.sensor {
-			width: $android2-photo-ratio;
-			padding-top: $android2-photo-ratio;
-			right: $android2-photo-rightSpacing-ratio;
-			top: $android2-speaker-topSpacing-ratio;
+			width: $android-photo-ratio;
+			padding-top: $android-photo-ratio;
+			right: $android-photo-rightSpacing-ratio;
+			top: $android-speaker-topSpacing-ratio;
 			transform: translateY(-16%);
 			margin: auto;
 		}
 		.speaker {
-			top: $android2-speaker-topSpacing-ratio;
-			width: $android2-speaker-width-container;
-			left: $android2-speaker-leftSpacing-ratio;
-			padding-top: $android2-speaker-ratio; 
-			border-radius: percentageCornerRadiusFor($android2-speaker-width, $android2-speaker-height, 4);
+			top: $android-speaker-topSpacing-ratio;
+			width: $android-speaker-width-container;
+			left: $android-speaker-leftSpacing-ratio;
+			padding-top: $android-speaker-ratio; 
+			border-radius: percentageCornerRadiusFor($android-speaker-width, $android-speaker-height, 4);
 			&:before {
-				border-radius: percentageCornerRadiusFor($android2-speaker-width, $android2-speaker-height, $speaker-radius);
+				border-radius: percentageCornerRadiusFor($android-speaker-width, $android-speaker-height, $speaker-radius);
 			}
 		}
 		.screen {
-			width: $android2-screen-width-container;
+			width: $android-screen-width-container;
 			> figure {
-				padding-top: $android2-screen-ratio;
+				padding-top: $android-screen-ratio;
 			}
 		}
 		.home-button {
-			bottom: $android2-button-bottomSpacing-ratio;
-			width: $android2-button-width-ratio;
-			padding-top: $android2-button-height-ratio;
+			bottom: $android-button-bottomSpacing-ratio;
+			width: $android-button-width-ratio;
+			padding-top: $android-button-height-ratio;
 			background-color: $website-color;
 			left: 0;
 			right: 0;
 			margin: auto;
-			border-radius: percentageCornerRadiusFor($android2-home-button-width, $android2-home-button-height, 15);
+			border-radius: percentageCornerRadiusFor($android-home-button-width, $android-home-button-height, 15);
 			&:before {
-				border-radius: percentageCornerRadiusFor($android2-home-button-width, $android2-home-button-height, 15);
+				border-radius: percentageCornerRadiusFor($android-home-button-width, $android-home-button-height, 15);
 			}
 		}
 	}
 	&.mac {
-		max-width: $mac2-width+px;
+		max-width: $mac-width+px;
 		.device {
-			padding-bottom: $mac2-ratio;
+			padding-bottom: $mac-ratio;
 			background-color: $device-color;
-			border-radius: percentageCornerRadiusFor($mac2-width, $mac2-height, $mac2-radius);
+			border-radius: percentageCornerRadiusFor($mac-width, $mac-height, $mac-radius);
 			&:before {
-				border-radius: percentageCornerRadiusFor($mac2-width, $mac2-height, $mac2-radius);
+				border-radius: percentageCornerRadiusFor($mac-width, $mac-height, $mac-radius);
 			}
 		}
 		.sensor {
-			width: $mac2-photo-ratio;
-			padding-top: $mac2-photo-ratio;
+			width: $mac-photo-ratio;
+			padding-top: $mac-photo-ratio;
 			right: 0;
 			left: 0;
-			top: $mac2-photo-topSpacing-ratio;
+			top: $mac-photo-topSpacing-ratio;
 			margin: auto;
 		}
 		.screen {
-			width: $mac2-screen-width-container;
+			width: $mac-screen-width-container;
 			> figure {
-				padding-top: $mac2-screen-ratio;
+				padding-top: $mac-screen-ratio;
 			}
 		}
 		.home-button {
