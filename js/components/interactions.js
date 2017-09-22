@@ -1,12 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-	const buttons = Array.from(document.querySelectorAll('.cta'));
+	const buttons = Array.from(document.querySelectorAll('.js-cta'));
 	const animateDevice = document.querySelector('.animate-device');
 	const overlay  = document.querySelector('.overlay');
 	let isActive = false;
-
-	const videoTest = "";
-
 
 	function insertDatasInAnimateDevice(animateDevice, deviceType, videoName) {
 		let choosenVideo = animateDevice.querySelector(`.js-${videoName}`);
