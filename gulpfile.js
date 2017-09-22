@@ -81,7 +81,7 @@ gulp.task('serve', () => {
         }
     });
     gulp.watch('*.html').on('change', browserSync.reload);
-    gulp.start('default');
+    gulp.watch('dist/js/bundle.js').on('change', browserSync.reload);
     gulp.watch('dist/css/*.css').on('change', browserSync.reload);
 });
 

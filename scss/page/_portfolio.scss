@@ -70,16 +70,32 @@ footer {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
+	z-index: 20;
 	&.activated {
+		opacity: 1;
 		animation-name: scaleUp;
-		animation-duration: 2s;
+		animation-duration: .4s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;		
 	}
 	&.desactivated {
 		animation-name: scaleDown;
-		animation-duration: 2s;
+		animation-duration: .4s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;	
+	}
+}
+
+.overlay {
+	display: none;
+	&.active {
+		display: block;
+		z-index: 10;
+		background-color: steelblue;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 }

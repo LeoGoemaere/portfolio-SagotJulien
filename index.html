@@ -21,7 +21,7 @@
 
 			<div class="row">
 				<div class="three-cols">
-					<div class="device-container iphone-v6">
+					<div class="device-container iphone-v6" data-device="iphone-v6">
 						<div class="device">
 							<span class="sensor"></span>
 							<span class="speaker"></span>
@@ -34,7 +34,7 @@
 							</div>
 							<span class="home-button"></span>
 						</div>
-						<div class="cta download">Watch Animation</div>
+						<div class="cta download" data-src="dist/assets/ios/panier-saison/PanierSaison.mov">Watch Animation</div>
 					</div>
 				</div>
 				<div class="three-cols">
@@ -250,7 +250,7 @@
 			</div>
 
 			<div class="row">
-				<div class="device-container ipad">
+				<div class="device-container ipad" data-device="ipad">
 					<div class="device">
 						<span class="sensor"></span>
 						<div class="screen">
@@ -499,18 +499,19 @@
 		</footer>
 	</main>
 
-	<div class="device-container animate-device mac">
+	<div class="device-container animate-device" data-device="">
 		<div class="device">
 			<span class="sensor"></span>
 			<span class="speaker"></span>
 			<div class="screen">
 				<figure>
-					<img src="" alt="">
+					<video autoplay="true"></video>
 				</figure>
 			</div>
 			<span class="home-button"></span>
 		</div>
 	</div>
+	<div class="overlay"></div>
 	<script src="dist/js/bundle.js"></script>
 </body>
 </html>
