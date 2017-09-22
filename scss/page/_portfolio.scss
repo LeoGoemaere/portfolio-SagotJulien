@@ -84,6 +84,12 @@ footer {
 		animation-delay: 0s;
 		animation-fill-mode: forwards;	
 	}
+	video {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 }
 
 .overlay {
@@ -91,7 +97,8 @@ footer {
 	&.active {
 		display: block;
 		z-index: 10;
-		background-color: steelblue;
+		background-color: $primaryColor;
+		opacity: 0.9;
 		position: fixed;
 		top: 0;
 		bottom: 0;

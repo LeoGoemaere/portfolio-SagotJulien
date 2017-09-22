@@ -8,14 +8,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	const videoTest = "";
 
 
-	function insertDatasInAnimateDevice(animateDevice, deviceType, deviceSrc) {
+	function insertDatasInAnimateDevice(animateDevice, deviceType, videoName) {
+		let choosenVideo = animateDevice.querySelector(`.js-${videoName}`);
 		animateDevice.classList.add(deviceType);
-		animateDevice.dataset.device = deviceType;
-		animateDevice.querySelector("video").src = deviceSrc;
-
 		animateDevice.classList.add('activated');
 		animateDevice.classList.remove('desactivated');
-
+		animateDevice.dataset.device = deviceType;
+		choosenVideo.classList.add('active');
+		choosenVideo.play();	// When datas are insert we play the video
 		isActive = true;
 	}
 
@@ -25,18 +25,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		isActive = false;
 	}
 
-	function removeAttributesAndSrcIfAnimationEnd(targetElement, classToRemove) {
+	function removeAttributesIfAnimationEnd(targetElement, classToRemove) {
+		let activeVideo = targetElement.querySelector("video.active");
 		targetElement.classList.remove(classToRemove);
 		targetElement.dataset.device = '';
-		targetElement.querySelector("video").src = '';
+		activeVideo.classList.remove('active');
+		activeVideo.load();	// Stop the video when animation end
 	}
 
 	function getDevice(targetElement) {
 		return targetElement.parentNode.dataset.device;
 	}
 
-	function getSrc(targetElement) {
-		return targetElement.dataset.src;
+	function getVideoName(targetElement) {
+		return targetElement.dataset.video;
 	}
 
 	function toggleOverlay(overlayElement, classToAdd) {
@@ -44,19 +46,18 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	buttons.map(button => button.addEventListener('click', function() { 
-		insertDatasInAnimateDevice(animateDevice, getDevice(this), getSrc(this));
+		insertDatasInAnimateDevice(animateDevice, getDevice(this), getVideoName(this));
 		toggleOverlay(overlay, 'active');
 	}))
 
 	overlay.addEventListener('click', function() {
-		// RemoveDatasInAnimateDevice(animateDevice);
 		desactivateAnimation(animateDevice);
 		toggleOverlay(this, 'active');
 	})
 
 	animateDevice.addEventListener('animationend', function() {
 		if (!isActive) {
-			removeAttributesAndSrcIfAnimationEnd(this, this.dataset.device)
+			removeAttributesIfAnimationEnd(this, this.dataset.device)
 		}
 	})
 
