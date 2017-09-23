@@ -83,12 +83,12 @@ footer {
 		animation-delay: 0s;
 		animation-fill-mode: forwards;	
 	}
-	video {
-		display: none;
-		&.active {
-			display: block;
-		}
-	}
+	// video {
+	// 	display: none;
+	// 	&.active {
+	// 		display: block;
+	// 	}
+	// }
 }
 
 .overlay {
@@ -114,5 +114,22 @@ footer {
 	}
 	&.off {
 		display: none;
+	}
+}
+
+.videos {
+	video {
+		display: none;
+		&.active {
+			display: block;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			transform: translateX(-50%) translateY(-50%);
+		}
 	}
 }
