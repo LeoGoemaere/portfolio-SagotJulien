@@ -1,6 +1,6 @@
 @keyframes scaleUp {
 	0% {
-		transform: translate(-50%, -50%) scale(0.4);
+		transform: translate(-50%, -50%) scale(0.75);
 		opacity: 0;
 	}
 	100% {
@@ -15,7 +15,7 @@
 		opacity: 1;
 	}
 	100% {
-		transform: translate(-50%, -50%) scale(0.4);
+		transform: translate(-50%, -50%) scale(0.75);
 		opacity: 0;
 	}
 }

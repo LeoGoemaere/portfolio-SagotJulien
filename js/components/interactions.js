@@ -8,17 +8,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	const breakpoint = 768;
 	let isActive = false;
 
-	console.log(videos);
-	// function insertDatasInAnimateDevice(animateDevice, deviceType, videoName) {
-	// 	let chosenVideo = animateDevice.querySelector(`.js-${videoName}`);
-	// 	animateDevice.classList.add(deviceType);
-	// 	animateDevice.classList.add('activated');
-	// 	animateDevice.classList.remove('desactivated');
-	// 	animateDevice.dataset.device = deviceType;
-	// 	chosenVideo.classList.add('active');
-	// 	chosenVideo.play();	// When datas are insert we play the video
-	// 	isActive = true;
-	// }
+	let formats = [
+		"mp4",
+		"webm"
+	]
 
 	function insertDatasInAnimateDevice(animateDevice, videosContainer, deviceType, videoName) {
 		let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
@@ -26,7 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		animateDevice.classList.add(deviceType);
 		animateDevice.classList.add('activated');
 		animateDevice.classList.remove('desactivated');
-		console.log(chosenVideo);
 		animateDevice.dataset.device = deviceType;
 
 		animateVideo.src = chosenVideo.dataset.src;
@@ -34,11 +26,27 @@ window.addEventListener('DOMContentLoaded', () => {
 		isActive = true;
 	}
 
-	function playFullScreen(videosContainer, videoName) {
+	// function insertDatasInAnimateDevice(animateDevice, videosContainer, deviceType, videoName) {
+	// 	let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
+	// 	let animateVideo = animateDevice.querySelector('video');
+	// 	let animateDeviceSourcesVideos = animateDevice.querySelectorAll('source');
+	// 	console.log(animateDeviceSourcesVideos);
+	// 	for (let i = 0; i < animateDeviceSourcesVideos.length; i++) {
+	// 		animateDeviceSourcesVideos[i].src = `${chosenVideo.dataset.src}.${formats[i]}`;
+	// 	}		
+	// 	animateDevice.classList.add(deviceType);
+	// 	animateDevice.classList.add('activated');
+	// 	animateDevice.classList.remove('desactivated');
+	// 	animateDevice.dataset.device = deviceType;
+	// 	animateVideo.play();	// When datas are insert we play the video
+	// 	isActive = true;
+	// }
+
+	function redirectToUrlVideo(videosContainer, videoName, sitePageName) {
 		let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
-		chosenVideo.load();
-		chosenVideo.classList.add('active');
-		chosenVideo.play();
+		let pageName = new RegExp(`${sitePageName}.html`, 'g');
+		let newSrc = window.location.href.replace(pageName, '');
+		window.location.href = `${newSrc}${chosenVideo.dataset.src}`;
 	}
 
 	function desactivateAnimation(animateDevice) {
@@ -47,21 +55,11 @@ window.addEventListener('DOMContentLoaded', () => {
 		isActive = false;
 	}
 
-	// function removeAttributesIfAnimationEnd(targetElement, classToRemove) {
-	// 	let activeVideo = targetElement.querySelector("video.active");
-	// 	targetElement.classList.remove(classToRemove);
-	// 	targetElement.dataset.device = '';
-	// 	activeVideo.classList.remove('active');
-	// 	activeVideo.load();	// Stop the video when animation end
-	// }
-
 	function removeAttributesIfAnimationEnd(targetElement, classToRemove) {
 		let animateVideo = targetElement.querySelector("video");
 		animateVideo.src = '';
 		targetElement.classList.remove(classToRemove);
 		targetElement.dataset.device = '';
-		// activeVideo.classList.remove('active');
-		// activeVideo.load();	// Stop the video when animation end
 	}
 
 	function getDevice(targetElement) {
@@ -85,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			insertDatasInAnimateDevice(animateDevice, wrapperVideos, getDevice(this), getVideoName(this));
 			playAnimationOverlay(overlay, 'off', 'active', 'inactive');
 		} else {
-			playFullScreen(wrapperVideos, getVideoName(this));
+			redirectToUrlVideo(wrapperVideos, getVideoName(this), 'index-lazy');
 		}
 	}))
 

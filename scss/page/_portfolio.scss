@@ -73,15 +73,17 @@ footer {
 	z-index: 20;
 	&.activated {
 		animation-name: scaleUp;
-		animation-duration: .4s;
+		animation-duration: .25s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;		
+		animation-timing-function: ease-out;
 	}
 	&.desactivated {
 		animation-name: scaleDown;
-		animation-duration: .4s;
+		animation-duration: .25s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;	
+		animation-timing-function: ease-out;
 	}
 	// video {
 	// 	display: none;
@@ -101,16 +103,18 @@ footer {
 	&.active {
 		background-color: $overlay-color;
 		animation-name: opacityUp;
-		animation-duration: .4s;
+		animation-duration: .25s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;
 	}
 	&.inactive {
 		background-color: $overlay-color;
 		animation-name: opacityDown;
-		animation-duration: .4s;
+		animation-duration: .25s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;
 	}
 	&.off {
 		display: none;
@@ -120,16 +124,16 @@ footer {
 .videos {
 	video {
 		display: none;
-		&.active {
-			display: block;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			transform: translateX(-50%) translateY(-50%);
-		}
+		// &.active {
+		// 	display: block;
+		// 	position: fixed;
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	min-width: 100%;
+		// 	min-height: 100%;
+		// 	width: auto;
+		// 	height: auto;
+		// 	transform: translateX(-50%) translateY(-50%);
+		// }
 	}
 }
