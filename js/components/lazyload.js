@@ -12,5 +12,4 @@ window.addEventListener('load', () => {
 		video.src = video.dataset.src;
 	})
 
-
 })

@@ -3,6 +3,7 @@
 	text-align: center;
 	position: relative;
 	display: inline-block;
+	cursor: pointer;
 	padding-left: (($picto-dimension + 1.4em)/$cta-size)+em;
 	@media #{$break-mobile} { 
 		display: block;
@@ -36,17 +37,19 @@
 		bottom: 0;
 		top: 0;
 		margin: auto;
-		width: $picto-dimension/$cta-size+em;
-		height: $picto-dimension/$cta-size+em;
+		width: 27px;
+		height: 27px;
 	}
 	&.watch {
 		&:before {
 			background: url("../assets/pictos/AppStore.svg") no-repeat center;	
+			background-size: contain;
 		}
 	}
 	&.download {
 		&:before {
 			background: url("../assets/pictos/Play.svg") no-repeat center;	
+			background-size: contain;
 		}
 	}
 }
