@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
 
 	const lazyImages = Array.from(document.querySelectorAll('.lazy-image'));
-
 	const lazyVideos = Array.from(document.querySelectorAll('.lazy-video'));
 
 	lazyImages.map((image) => {

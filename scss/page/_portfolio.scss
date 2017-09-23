@@ -72,7 +72,6 @@ footer {
 	transform: translate(-50%, -50%) scale(0);
 	z-index: 20;
 	&.activated {
-		opacity: 1;
 		animation-name: scaleUp;
 		animation-duration: .4s;
 		animation-delay: 0s;
@@ -93,16 +92,27 @@ footer {
 }
 
 .overlay {
-	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
 	&.active {
-		display: block;
-		z-index: 10;
-		background-color: $primaryColor;
-		opacity: 0.9;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		background-color: $overlay-color;
+		animation-name: opacityUp;
+		animation-duration: .4s;
+		animation-delay: 0s;
+		animation-fill-mode: forwards;
+	}
+	&.inactive {
+		background-color: $overlay-color;
+		animation-name: opacityDown;
+		animation-duration: .4s;
+		animation-delay: 0s;
+		animation-fill-mode: forwards;
+	}
+	&.off {
+		display: none;
 	}
 }
