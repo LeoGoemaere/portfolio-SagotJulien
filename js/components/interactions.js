@@ -8,11 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const breakpoint = 768;
 	let isActive = false;
 
-	let formats = [
-		"mp4",
-		"webm"
-	]
-
 	function insertDatasInAnimateDevice(animateDevice, videosContainer, deviceType, videoName) {
 		let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
 		let animateVideo = animateDevice.querySelector('video');
@@ -20,27 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		animateDevice.classList.add('activated');
 		animateDevice.classList.remove('desactivated');
 		animateDevice.dataset.device = deviceType;
-
 		animateVideo.src = chosenVideo.dataset.src;
 		animateVideo.play();	// When datas are insert we play the video
 		isActive = true;
 	}
-
-	// function insertDatasInAnimateDevice(animateDevice, videosContainer, deviceType, videoName) {
-	// 	let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
-	// 	let animateVideo = animateDevice.querySelector('video');
-	// 	let animateDeviceSourcesVideos = animateDevice.querySelectorAll('source');
-	// 	console.log(animateDeviceSourcesVideos);
-	// 	for (let i = 0; i < animateDeviceSourcesVideos.length; i++) {
-	// 		animateDeviceSourcesVideos[i].src = `${chosenVideo.dataset.src}.${formats[i]}`;
-	// 	}		
-	// 	animateDevice.classList.add(deviceType);
-	// 	animateDevice.classList.add('activated');
-	// 	animateDevice.classList.remove('desactivated');
-	// 	animateDevice.dataset.device = deviceType;
-	// 	animateVideo.play();	// When datas are insert we play the video
-	// 	isActive = true;
-	// }
 
 	function redirectToUrlVideo(videosContainer, videoName, sitePageName) {
 		let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
@@ -86,12 +64,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			redirectToUrlVideo(wrapperVideos, getVideoName(this), 'index-lazy');
 		}
 	}))
-
-	videos.map(video => video.addEventListener('pause', function() { 
-		this.classList.remove('active');
-	}))
-
-
 
 	overlay.addEventListener('click', function() {
 			desactivateAnimation(animateDevice);
