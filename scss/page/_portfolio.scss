@@ -85,12 +85,6 @@ footer {
 		animation-fill-mode: forwards;	
 		animation-timing-function: ease-out;
 	}
-	// video {
-	// 	display: none;
-	// 	&.active {
-	// 		display: block;
-	// 	}
-	// }
 }
 
 .overlay {
@@ -121,19 +115,36 @@ footer {
 	}
 }
 
+.close-overlay {
+	background: url('../assets/pictos/CloseButton.svg');
+	width: 44px;
+	height: 44px;
+	position: fixed;
+	top: 22px;
+	right: 22px;
+	cursor: pointer;
+	z-index: 20;
+	&.activated {
+		animation-name: scaleButtonCloseUp;
+		animation-duration: .25s;
+		animation-delay: 0s;
+		animation-fill-mode: forwards;		
+		animation-timing-function: ease-out;
+	}
+	&.desactivated {
+		animation-name: scaleButtonCloseDown;
+		animation-duration: .25s;
+		animation-delay: 0s;
+		animation-fill-mode: forwards;	
+		animation-timing-function: ease-out;
+	}
+	&.off {
+		display: none;
+	}
+}
+
 .videos {
 	video {
 		display: none;
-		// &.active {
-		// 	display: block;
-		// 	position: fixed;
-		// 	top: 50%;
-		// 	left: 50%;
-		// 	min-width: 100%;
-		// 	min-height: 100%;
-		// 	width: auto;
-		// 	height: auto;
-		// 	transform: translateX(-50%) translateY(-50%);
-		// }
 	}
 }
