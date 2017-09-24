@@ -1,5 +1,5 @@
 .cta {
-	$picto-dimension: 2.8em;
+	$picto-dimension: 2.7em;
 	text-align: center;
 	position: relative;
 	display: inline-block;
@@ -37,8 +37,8 @@
 		bottom: 0;
 		top: 0;
 		margin: auto;
-		width: 27px;
-		height: 27px;
+		width: $picto-dimension/$cta-size+em;
+		height: $picto-dimension/$cta-size+em;
 	}
 	&.watch {
 		&:before {

@@ -45,6 +45,11 @@ gulp.task('sources', () => {
 	.pipe(gulp.dest('./dist/assets'));
 });
 
+gulp.task('copy-videos', () => { 
+	return gulp.src('./assets/**/*.mp4')
+	.pipe(gulp.dest('./dist/assets'));
+});
+
 gulp.task('js-maps', () => {
 	return gulp.src('js/components/*.js')
 	.pipe(sourcemaps.init())
@@ -87,7 +92,7 @@ gulp.task('serve', () => {
 
 
 gulp.task('build', () => {
-	gulp.start(['sass-build', 'sources', 'js-build']);
+	gulp.start(['sass-build', 'sources', 'copy-videos', 'js-build']);
 })
 
 gulp.task('default', () => {
