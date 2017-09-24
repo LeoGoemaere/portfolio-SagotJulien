@@ -85,6 +85,12 @@ footer {
 		animation-fill-mode: forwards;	
 		animation-timing-function: ease-out;
 	}
+	video {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 }
 
 .overlay {
