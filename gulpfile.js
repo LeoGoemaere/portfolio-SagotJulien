@@ -51,7 +51,7 @@ gulp.task('copy-videos', () => {
 });
 
 gulp.task('js-maps', () => {
-	return gulp.src('js/components/*.js')
+	return gulp.src('js/**/*.js')
 	.pipe(sourcemaps.init())
 	.pipe(babel({
 		presets: ['es2015']
@@ -63,7 +63,7 @@ gulp.task('js-maps', () => {
 });
 
 gulp.task('js-build', () => {
-	return gulp.src('js/components/*.js')
+	return gulp.src('js/**/*.js')
 	.pipe(babel({
 		presets: ['es2015']
 	}))
