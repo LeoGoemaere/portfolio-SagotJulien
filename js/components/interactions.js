@@ -3,20 +3,32 @@ window.addEventListener('DOMContentLoaded', () => {
 	const buttons = Array.from(document.querySelectorAll('.js-cta'));
 	const animateDevice = document.querySelector('.animate-device');
 	const wrapperVideos = document.querySelector('.videos');
-	const videos = Array.from(wrapperVideos.querySelectorAll('video'));
+	// const videos = Array.from(wrapperVideos.querySelectorAll('video'));
 	const overlay  = document.querySelector('.overlay');
 	const closeOverlay  = document.querySelector('.close-overlay');
 	const breakpoint = 768;
 	let isActive = false;
 
-	function insertDatasInAnimateDevice(animateDevice, videosContainer, deviceType, videoName) {
-		let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
-		let animateVideo = animateDevice.querySelector('video');
+	// function insertDatasInAnimateDevice(animateDevice, videosContainer, deviceType, videoName) {
+	// 	let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
+	// 	let animateVideo = animateDevice.querySelector('video');
+	// 	animateDevice.classList.add(deviceType);
+	// 	setElementActive(animateDevice, true);
+	// 	animateDevice.dataset.device = deviceType;
+	// 	animateVideo.src = chosenVideo.src;
+	// 	animateVideo.play();	// When datas are insert we play the video
+	// 	isActive = true;
+	// }
+
+	function insertDatasInAnimateDevice(animateDevice, deviceType, videoName) {
+		let chosenVideo = animateDevice.querySelector(`.js-${videoName}`);
+		// let animateVideo = animateDevice.querySelector('video');
 		animateDevice.classList.add(deviceType);
 		setElementActive(animateDevice, true);
 		animateDevice.dataset.device = deviceType;
-		animateVideo.src = chosenVideo.dataset.src;
-		animateVideo.play();	// When datas are insert we play the video
+		// animateVideo.src = chosenVideo.src;
+		chosenVideo.classList.add('active');
+		chosenVideo.play();	// When datas are insert we play the video
 		isActive = true;
 	}
 
@@ -32,9 +44,16 @@ window.addEventListener('DOMContentLoaded', () => {
 		isActive = false;
 	}
 
+	// function removeAttributesIfAnimationEnd(targetElement, classToRemove) {
+	// 	let animateVideo = targetElement.querySelector("video");
+	// 	animateVideo.src = '';
+	// 	targetElement.classList.remove(classToRemove);
+	// 	targetElement.dataset.device = '';
+	// }
+
 	function removeAttributesIfAnimationEnd(targetElement, classToRemove) {
-		let animateVideo = targetElement.querySelector("video");
-		animateVideo.src = '';
+		let animateVideo = targetElement.querySelector("video.active");
+		animateVideo.classList.remove('active');
 		targetElement.classList.remove(classToRemove);
 		targetElement.dataset.device = '';
 	}
@@ -67,7 +86,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	buttons.map(button => button.addEventListener('click', function() { 
 		if (window.innerWidth > breakpoint) {
-			insertDatasInAnimateDevice(animateDevice, wrapperVideos, getDevice(this), getVideoName(this));
+			// insertDatasInAnimateDevice(animateDevice, wrapperVideos, getDevice(this), getVideoName(this));
+			insertDatasInAnimateDevice(animateDevice, getDevice(this), getVideoName(this));
 			playAnimationOverlay(overlay, 'off', 'active', 'inactive');
 			playAnimationOverlay(closeOverlay, 'off', 'activated', 'desactivated');
 		} else {
