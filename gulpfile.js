@@ -51,7 +51,7 @@ gulp.task('copy-videos', () => {
 });
 
 gulp.task('js-maps', () => {
-	return gulp.src('js/**/*.js')
+	return gulp.src(['js/libraries/scrollreveal.js', 'js/**/*.js'])
 	.pipe(sourcemaps.init())
 	.pipe(babel({
 		presets: ['es2015']
@@ -63,20 +63,13 @@ gulp.task('js-maps', () => {
 });
 
 gulp.task('js-build', () => {
-	return gulp.src('js/**/*.js')
+	return gulp.src(['js/libraries/scrollreveal.js', 'js/**/*.js'])
 	.pipe(babel({
 		presets: ['es2015']
 	}))
 	.pipe(concat('bundle.js'))
 	.pipe(uglify())
     .pipe(gulp.dest('dist/js/'));
-});
-
-
-gulp.task('js-concat', ['js'], () => {
-	return gulp.src('./dist/js/components/*.js')
-    .pipe(concat('bundle.js'))
-    .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('serve', () => {
