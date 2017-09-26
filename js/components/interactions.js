@@ -53,6 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	function removeAttributesIfAnimationEnd(targetElement, classToRemove) {
 		let animateVideo = targetElement.querySelector("video.active");
+		animateVideo.load();
 		animateVideo.classList.remove('active');
 		targetElement.classList.remove(classToRemove);
 		targetElement.dataset.device = '';
