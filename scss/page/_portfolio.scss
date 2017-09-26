@@ -1,3 +1,6 @@
+/* Ensure elements load hidden before ScrollReveal runs */
+.sr .fooReveal { visibility: hidden; }
+
 body {
 	background-color: $website-color;
 
@@ -74,13 +77,13 @@ footer {
 	&.activated {
 		animation-name: scaleUp;
 		animation-duration: .25s;
-		animation-delay: 0s;
+		animation-delay: 0.2s;
 		animation-fill-mode: forwards;		
 		animation-timing-function: ease-out;
 	}
 	&.desactivated {
 		animation-name: scaleDown;
-		animation-duration: .25s;
+		animation-duration: .3s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;	
 		animation-timing-function: ease-out;
@@ -103,7 +106,7 @@ footer {
 	&.active {
 		background-color: $overlay-color;
 		animation-name: opacityUp;
-		animation-duration: .25s;
+		animation-duration: .3s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;
 		animation-timing-function: ease-out;
@@ -111,8 +114,8 @@ footer {
 	&.inactive {
 		background-color: $overlay-color;
 		animation-name: opacityDown;
-		animation-duration: .25s;
-		animation-delay: 0s;
+		animation-duration: .3s;
+		animation-delay: 0.2s;
 		animation-fill-mode: forwards;
 		animation-timing-function: ease-out;
 	}
@@ -130,16 +133,17 @@ footer {
 	right: 22px;
 	cursor: pointer;
 	z-index: 20;
+	opacity: 0;
 	&.activated {
 		animation-name: scaleButtonCloseUp;
-		animation-duration: .25s;
-		animation-delay: 0s;
+		animation-duration: .4s;
+		animation-delay: 0.2s;
 		animation-fill-mode: forwards;		
 		animation-timing-function: ease-out;
 	}
 	&.desactivated {
 		animation-name: scaleButtonCloseDown;
-		animation-duration: .25s;
+		animation-duration: .4s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;	
 		animation-timing-function: ease-out;
