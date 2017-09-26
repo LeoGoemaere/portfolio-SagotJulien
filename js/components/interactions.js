@@ -19,10 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function redirectToUrlVideo(videosContainer, videoName, sitePageName) {
-		let chosenVideo = videosContainer.querySelector(`.js-${videoName}`);
+		let chosenVideo = videosContainer.querySelector(`.js-${videoName} > source`);
+		console.log(chosenVideo);
 		let pageName = new RegExp(`${sitePageName}.html`, 'g');
 		let newSrc = window.location.href.replace(pageName, '');
-		window.location.href = `${newSrc}${chosenVideo.dataset.src}`;
+		window.location.href = `${newSrc}${chosenVideo.src}`;
 	}
 
 	function desactivateAnimation(animateDevice) {
