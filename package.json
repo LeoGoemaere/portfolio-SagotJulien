@@ -19,8 +19,7 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "lazysizes": "^4.0.0-rc3"
+    "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
     "imagemin-pngquant": "^5.0.1"
