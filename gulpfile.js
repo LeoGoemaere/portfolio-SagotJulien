@@ -51,7 +51,7 @@ gulp.task('copy-videos', () => {
 });
 
 gulp.task('js-maps', () => {
-	return gulp.src(['js/libraries/scrollreveal.js', 'js/**/*.js'])
+	return gulp.src(['js/components/lazyload.js', 'js/**/*.js'])
 	.pipe(sourcemaps.init())
 	.pipe(babel({
 		presets: ['es2015']
