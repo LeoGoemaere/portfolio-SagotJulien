@@ -1,6 +1,3 @@
-/* Ensure elements load hidden before ScrollReveal runs */
-.sr .fooReveal { visibility: hidden; }
-
 body {
 	background-color: $website-color;
 
