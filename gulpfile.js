@@ -9,9 +9,13 @@ const gulp = require('gulp'),
 	  uglify = require('gulp-uglify'),
 	  concat = require('gulp-concat'),
 	  sourcemaps = require('gulp-sourcemaps'),
-	  browserSync = require('browser-sync').create();
+	  browserSync = require('browser-sync').create(),
+	  critical = require('critical'),
+	  htmlmin = require('gulp-htmlmin'),
+	  replace = require('gulp-replace');
 
 
+const pkg = require('./package.json');
 
 gulp.task('sass-maps', () => {
 	return gulp.src('./scss/**/*.scss')
@@ -34,6 +38,16 @@ gulp.task('sass-build', () => {
     }))
 	.pipe(gulp.dest('./dist/css'));
 })
+
+gulp.task('html', function() {
+  return gulp.src('./index.html')
+  	.pipe(replace('dist/', ''))
+    .pipe(htmlmin({
+    	collapseWhitespace: true,
+    	minifyJS: true
+    }))
+    .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('sources', () => { 
 	return gulp.src(['./assets/**/*.{jpg,png,gif,svg,ico}'])
@@ -83,9 +97,32 @@ gulp.task('serve', () => {
     gulp.watch('dist/css/*.css').on('change', browserSync.reload);
 });
 
+gulp.task('critical', () => {
+	
+		critical.generate({
+			src: pkg.critical.url,
+			dest: "./critical/critical.css",
+			include: [
+				/.*\:hover/,
+			],
+			ignore: [
+				"@font-face",
+				/url\(/
+			],
+			base: "./",
+			minify: true,
+			width: 1200,
+			height: 1200,
+		}, (err, output) => {
+			if (err) {
+				console.error("failed, run gulp serve before launch critical task");
+			}
+		});
+
+});
 
 gulp.task('build', () => {
-	gulp.start(['sass-build', 'sources', 'copy-videos', 'js-build']);
+	gulp.start(['sass-build', 'sources', 'copy-videos', 'js-build', 'html']);
 })
 
 gulp.task('default', () => {
